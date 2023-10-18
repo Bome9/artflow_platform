@@ -9,8 +9,8 @@
   <title>Регистрация</title>
 </head>
 <body>
-    <section style="background: url('{% static 'accounts/images/register.jpg' %}') no-repeat; background-position: center; background-size: cover">
-        <a href="#" class="logo"><img src="{% static 'accounts/images/logo_w.png' %}" alt="Лого"></a>
+    <section style="background-image: url('{% static 'accounts/images/register.jpg' %}')">
+        <a href="{% url 'home' %}" class="logo"><img src="{% static 'accounts/images/logo_w.png' %}" alt="Лого"></a>
         <div class="form-box">
             <div class="form-value">
                 <form action="">
@@ -27,7 +27,7 @@
                     </div>
                     <button>Зарегистрироваться</button>
                     <div class="register">
-                        <p>У Вас уже есть аккаунт? <a href="#">Войти</a></p>
+                        <p>У Вас уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
                     </div>
                 </form>
             </div>
