@@ -1,19 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href=" {% static 'register/css/reset.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href=" {% static 'accounts/css/login_style.css' %}">
   <title>Вход</title>
 </head>
 <body>
-    <section>
-        <a href="#" class="logo"><img src="images/logo_w.png" alt="logo"></a>
+    <section style="background-image: url('{% static 'accounts/images/login.jpg' %}')">
+        <a href="{% url 'home' %}" class="logo"><img src="{% static 'accounts/images/logo_w.png' %}" alt="Лого"></a>
         <div class="form-box">
             <div class="form-value">
                 <form action="">
                     <h2>Вход</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
+                        <input type="text" required>
                         <label for="">Почта</label>
                     </div>
                     <div class="inputbox">
@@ -23,7 +27,7 @@
                     </div>
                     <button>Войти</button>
                     <div class="register">
-                        <p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+                        <p>Нет аккаунта? <a href="{% url 'register' %}">Зарегистрироваться</a></p>
                     </div>
                 </form>
             </div>
