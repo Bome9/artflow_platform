@@ -48,7 +48,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('publications')
+            return redirect('home')
         else:
             messages.info(request, 'Пользователь не найден')
             return redirect('login')

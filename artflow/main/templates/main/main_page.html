@@ -4,47 +4,6 @@
 
 {% block title %} ArtFlow {% endblock %}
 {% block content %}
-    <header class='header'>
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="logo"><img src="{% static 'main/images/home/logo.svg' %}" alt="Лого"></a>
-                <div class="header__block">
-                    <nav class="nav">
-                        <a class='nav__link active' href="#">
-                            Главная
-                        </a>
-                        <a class='nav__link' href="{% url 'publications' %}">
-                            Публикации
-                        </a>
-                        <a class='nav__link' href="#">
-                            Функции
-                        </a>
-                        <a class='nav__link' href="#">
-                            О нас
-                        </a>
-                    </nav>
-                </div>
-                <div class="header__block">
-                    <div class="search">
-                        <input type="text" placeholder="" class="search__input">
-                        <button class="search__button">
-                            <img src="{% static 'main/images/home/search.png' %}" alt="Поиск">
-                        </button>
-                    </div>
-                </div>
-                <div class="header__block">
-                    <div class='header__auth'>
-                        <a class='nav__auth sign_in' href="{% url 'login' %}">
-                            Войти
-                        </a>
-                        <a class='nav__auth sign_up' href="{% url 'register' %}">
-                            Зарегистрироваться
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <div class="intro">
         <div class="container">
@@ -151,10 +110,5 @@
         </div> <!-- /.container -->
     </div> <!-- /.pictures -->
 
-    <footer>
-        <div class="footer__wrapper">
-            <img src="{% static 'main/images/home/logo.svg' %}" alt="logo">
-        </div>
-    </footer>
 {% endblock %}
 
