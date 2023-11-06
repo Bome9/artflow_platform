@@ -38,7 +38,7 @@ if (profileButton) {
 }
 
 const gallery = document.getElementById('gallery');
-const accessKey = 'qcr8SIfIW9E3qKJDFF1m1b8Z5Phpu97_YnVI2aq7pvk';
+const accessKey = '6wQO4Y0Vab7FB1Xpt31oaJHs3mH5h9itprBc8FKQS5w';
 let page = 1; // Номер страницы для загрузки новых фотографий
 
 // Функция для загрузки фотографий из Unsplash API
