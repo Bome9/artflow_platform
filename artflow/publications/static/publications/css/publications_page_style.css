@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.header {
+    background-color: #FFFAE7;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    background: #F8F4E3;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+}
+
+.header__wrapper {
+    background-color: #FFFAE7;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.nav__link:hover {
+    color: #FF9518;
+}
+
+.nav__link.active {
+    color: #FF9518;
+}
+
+
+
+.search {
+    width: 230px;
+    height: 37px;
+    border: 2px solid black;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 35px;
+    background-color: transparent;
+}
+
+.search__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-left: -20px;
+}
+
+.search__button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.nav__menu {
+    font-size: 16px;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.nav__menu.profile:hover {
+    color: #FF9518;
+}
+
+.nav__menu.upload:hover {
+    color: #FF9518;
+}
+
+.header__menu {
+    margin-right: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+.nav__menu.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.nav__menu.profile img {
+    width: 23px;
+    height: 23px;
+}
+
+
+/* Стили для выпадающего меню */
+.profile {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.triangle {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #efeace; /* Цвет треугольника и его размер */
+    top: -10px; /* Расположение треугольника над блоком меню */
+    left: 50%; /* Расположение треугольника по центру блока меню */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+}
+
+/* Стили для выпадающего контента */
+.dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #fcf9ea;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    margin-top: 15px;
+    left: -20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Стили для ссылок в выпадающем меню */
+.dropdown__content a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #222222;
+}
+
+/* Стили для ссылок при наведении */
+.dropdown__content a:hover {
+    color: #FF9518;
+}
+
+
+
+.gallery{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery__block{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-auto-rows: 240px;
+    grid-auto-flow: dense;
+    grid-gap: 15px;
+}
+
+.image{
+    background: var(--bg) center / cover;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px #000, 0 0px 0px #000;
+    transition: all 0.3s ease-in-out;
+}
+.image:hover {
+    box-shadow: inset 0 0 0 #000, 0 5px 10px #000;
+}
+.image:nth-child(5n){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.image:nth-child(2n){
+    grid-row: span 2;
+}
+
+
+
+
+.nav__menu.upload {
+    display: flex;
+    justify-content: center;
+    border-radius: 45px;
+    border: 3px #F17105 solid;
+    padding: 15px 40px;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav__menu.upload img {
+    width: 23px;
+    height: 23px;
+}
+
+
+
+
+
+
+
+.footer {
+    padding: 120px 0 120px;
+}
+
+.footer__wrapper {
+    padding: 100px 0 100px;
+    background-color: #F8EAB1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,71 @@
+{% extends 'publications/layout.html' %}
+{% load static %}
+
+
+{% block title %} ArtFlow {% endblock %}
+{% block content %}
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#" class="logo"><img src="{% static 'publications/images/logo.svg' %}" alt="logo"/></a>
+                <nav class="nav">
+                    <a class="nav__link" href="{% url 'home' %}"> Главная </a>
+                    <a class="nav__link active" href="#"> Публикации </a>
+                    <a class="nav__link" href="#"> Функции </a>
+                    <a class="nav__link" href="#"> О нас </a>
+                </nav>
+                <div class="search">
+                    <input type="text" placeholder="" class="search__input"/>
+                    <button class="search__button">
+                        <img src="{% static 'publications/images/search.png' %}" alt="Поиск"/>
+                    </button>
+                </div>
+
+                <div class="header__menu">
+                    <div class="nav__menu profile" id="profile-button">
+                        <img src="{% static 'publications/images/profile.png' %}" alt="Профиль"/>
+                        Профиль
+                        <div class="dropdown__content" id="profile-dropdown">
+                            <div class="triangle"></div>
+                            <a href="#">
+                                <img src="{% static 'publications/images/skills.png' %}" alt="Профиль"/>
+                                Аккаунт
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'publications/images/gallery.png' %}" alt="Профиль"/>
+                                Гелерея
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'publications/images/question.png' %}" alt="Профиль"/>
+                                Помощь
+                            </a>
+                            <a href="{% url 'logout' %}">
+                                <img src="{% static 'publications/images/log-out.png' %}" alt="Профиль"/>
+                                Выйти
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="nav__menu upload" href="#">
+                        <img src="{% static 'publications/images/upload_pic.png' %}" alt="Загрузка"/>
+                        Загрузить
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="gallery">
+        <div class="container">
+            <div class="gallery__block" id="gallery"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__wrapper">
+            <img src="{% static 'publications/images/logo.svg' %}" alt="logo">
+        </div>
+    </footer>
+
+    <script src="{% static 'publications/js/script.js' %}"></script>
+{% endblock %}
