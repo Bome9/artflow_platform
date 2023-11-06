@@ -74,3 +74,5 @@ window.addEventListener('scroll', () => {
 
 // Начальная загрузка фотографий при загрузке страницы
 loadPhotos();
+
+
