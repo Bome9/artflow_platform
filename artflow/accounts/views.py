@@ -7,7 +7,6 @@ from accounts.models import Profile
 # Create your views here.
 
 def register(request):
-
     if request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']
@@ -25,13 +24,13 @@ def register(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
 
-                #log user in and direct to settings page
+                # log user in and direct to settings page
 
-                #create a Profile object for the new user
+                # create a Profile object for the new user
                 user_model = User.objects.get(username=username)
                 new_profile = Profile.objects.create(user=user_model, id_user=user_model.id)
                 new_profile.save()
-                return redirect('register')
+                return redirect('publications')
         else:
             messages.info(request, 'Пароли не совпадают')
             return redirect('register')
@@ -41,7 +40,6 @@ def register(request):
 
 
 def login(request):
-
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -50,9 +48,14 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('publications')
         else:
             messages.info(request, 'Пользователь не найден')
             return redirect('login')
     else:
         return render(request, 'accounts/login_page.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('login')
