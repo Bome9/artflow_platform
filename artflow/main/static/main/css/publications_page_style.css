@@ -137,7 +137,7 @@ body {
 }
 
 
-/* Стили для выпадающего меню */
+
 .profile {
     position: relative;
     display: inline-block;
@@ -148,14 +148,13 @@ body {
     position: absolute;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #efeace; /* Цвет треугольника и его размер */
-    top: -10px; /* Расположение треугольника над блоком меню */
-    left: 50%; /* Расположение треугольника по центру блока меню */
-    transform: translateX(-50%); /* Центрирование по горизонтали */
+    border-bottom: 10px solid rgb(247, 199, 65);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Стили для выпадающего контента */
-.dropdown__content {
+.dropdown__profile {
     display: none;
     position: absolute;
     background-color: #fcf9ea;
@@ -171,8 +170,8 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Стили для ссылок в выпадающем меню */
-.dropdown__content a {
+
+.dropdown__profile a {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -180,18 +179,140 @@ body {
     padding: 10px 12px;
     text-decoration: none;
     color: #222222;
+    transition: color .2s ease;
 }
 
-/* Стили для ссылок при наведении */
-.dropdown__content a:hover {
+
+.dropdown__profile a:hover,
+.dropdown__categories a:hover{
     color: #FF9518;
+}
+
+.nav__menu.upload {
+    display: flex;
+    justify-content: center;
+    border-radius: 45px;
+    border: 3px #F17105 solid;
+    padding: 15px 40px;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav__menu.upload img {
+    width: 23px;
+    height: 23px;
+}
+
+
+
+
+.intro__wrapper__pub {
+    display: flex;
+    justify-content: center;
+    margin: 80px 20px 80px 20px;
+    min-height: 102px;
+}
+
+.intro__block__pub {
+    max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.intro__title__pub {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 52px;
+}
+
+.intro__text__pub {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+.nav2__wrapper {
+    background-color: #FFF0BB;
+    margin: 0px 20px 0px 20px;
+    border-radius: 17px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 45px;
+    padding: 14px;
+    width: 220px;
+    align-items: center;
+    gap: 6px;
+    background-color: #F17105;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.dropdown__categories {
+    display: none;
+    position: absolute;
+    background-color: #fcf9ea;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 135%;
+    left: 2;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown__categories a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #222222;
+    transition: color .2s ease;
+}
+
+
+
+.categories .arrow__icon {
+    height: 15px;
+    transition: transform 0.3s ease; /* Добавляем переход для свойства transform */
+}
+
+.categories.open .arrow__icon {
+    transform: rotate(180deg); /* Поворачиваем иконку на 180 градусов */
+}
+
+
+.selections {
+    gap: 60px;
+    margin-right: 406px;
 }
 
 
 
 .gallery{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 50px 20px 50px 20px;
+
 }
 
 .gallery__block{
@@ -218,30 +339,6 @@ body {
 .image:nth-child(2n){
     grid-row: span 2;
 }
-
-
-
-
-
-
-
-.nav__menu.upload {
-    display: flex;
-    justify-content: center;
-    border-radius: 45px;
-    border: 3px #F17105 solid;
-    padding: 15px 40px;
-    align-items: center;
-    gap: 6px;
-}
-
-.nav__menu.upload img {
-    width: 23px;
-    height: 23px;
-}
-
-
-
 
 
 
