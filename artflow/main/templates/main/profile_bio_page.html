@@ -1,0 +1,54 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block title %} Публикации {% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="profile__bio">
+        <div class="cover">
+            <img
+                    class="profile__cover"
+                    src="{% static 'main/images/profile/cover_default.png' %}"
+                    alt="Обложка"
+            />
+
+            <div class="profile__info">
+                <img
+                        class="profile__picture"
+                        src="{% static 'main/images/profile/profile_img_default.png' %}"
+                        alt="Фото профиля"
+                />
+                <div class="name_and_bio">
+                    <div class="name">Ваше Имя</div>
+                    <div class="biography">Ура! Я пользуюсь ArtFlow.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="user_bar">
+            <div class="user_bar__nav">
+                <h1>Портфолио</h1>
+                <h1 class="active">Биография</h1>
+            </div>
+        </div>
+
+        <div class="profile__bio__info">
+            <div class="profile__bio__info__block">
+                <h3>О себе</h3>
+                <p>John1 пока что не добавил биографию.</p>
+            </div>
+            <div class="profile__bio__info__block">
+                <h3>Навыки</h3>
+                <p>John1 пока что не добавил навыки.</p>
+            </div>
+            <div class="profile__bio__info__block">
+                <h3>Достижения</h3>
+                <p>John1 пока что не добавил достижения.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

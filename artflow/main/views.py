@@ -13,3 +13,8 @@ def publications(request):
 
 def settings(request):
     return render(request, 'main/settings_page.html')
+
+
+def profile_bio(request):
+    return render(request, 'main/profile_bio_page.html')
+
