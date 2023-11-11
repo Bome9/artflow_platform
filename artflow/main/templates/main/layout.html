@@ -9,6 +9,7 @@
     <link rel="stylesheet" href=" {% static 'main/css/reset.css' %}">
     <link rel="stylesheet" href=" {% static 'main/css/main_page_style.css' %}">
     <link rel="stylesheet" href=" {% static 'main/css/publications_page_style.css' %}">
+    <link rel="stylesheet" href=" {% static 'main/css/settings_page.css' %}">
 </head>
 
 <body>
@@ -41,9 +42,9 @@
                                 <img src="{% static 'main/images/publications/my_profile.png' %}" alt="Профиль"/>
                                 Мой профиль
                             </a>
-                            <a href="#">
+                            <a href="{% url 'settings' %}">
                                 <img src="{% static 'main/images/publications/skills.png' %}" alt="Профиль"/>
-                                Аккаунт
+                                Настройки
                             </a>
                             <a href="#">
                                 <img src="{% static 'main/images/publications/gallery.png' %}" alt="Профиль"/>

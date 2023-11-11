@@ -9,3 +9,7 @@ def main(request):
 
 def publications(request):
     return render(request, 'main/publications_page.html')
+
+
+def settings(request):
+    return render(request, 'main/settings_page.html')
