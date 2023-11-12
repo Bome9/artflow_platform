@@ -1,5 +1,5 @@
 const gallery = document.getElementById('gallery');
-const accessKey = 'rp7OeT-mm-IpBTCIvjY9OKbqkka3fh11e50iRKfIv5M';
+const accessKey = '6wQO4Y0Vab7FB1Xpt31oaJHs3mH5h9itprBc8FKQS5w';
 let page = 1; // Номер страницы для загрузки новых фотографий
 
 // Функция для загрузки фотографий из Unsplash API
