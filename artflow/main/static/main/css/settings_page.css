@@ -53,8 +53,20 @@ body {
 .settings__change__images{
     display: flex;
     align-items: center;
-    gap: 70px;
-    margin: 90px 130px 120px 130px;
+    gap: 175px;
+    margin: 90px 130px 120px 145px;
+}
+
+.profile_img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.cover_img img{
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 .change__profile_img,
