@@ -19,7 +19,7 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a href="#" class="logo"><img src="{% static 'main/images/publications/logo.svg' %}" alt="logo"/></a>
+                <a href="{% url 'home' %}" class="logo"><img src="{% static 'main/images/publications/logo.svg' %}" alt="logo"/></a>
                 <nav class="nav">
                     <a class="nav__link" href="{% url 'home' %}"> Главная </a>
                     <a class="nav__link" href="{% url 'publications' %}"> Публикации </a>
@@ -76,7 +76,7 @@
     <header class='header'>
         <div class="container">
             <div class="header__wrapper">
-                <a href="#" class="logo"><img src="{% static 'main/images/home/logo.svg' %}" alt="Лого"></a>
+                <a href="{% url 'home' %}" class="logo"><img src="{% static 'main/images/home/logo.svg' %}" alt="Лого"></a>
                 <div class="header__block">
                     <nav class="nav">
                         <a class='nav__link' href="{% url 'home' %}">

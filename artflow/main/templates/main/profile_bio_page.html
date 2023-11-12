@@ -8,20 +8,11 @@
 <div class="container">
     <div class="profile__bio">
         <div class="cover">
-            <img
-                    class="profile__cover"
-                    src="{% static 'main/images/profile/cover_default.png' %}"
-                    alt="Обложка"
-            />
-
+            <img class="profile__cover" src="{{ user_profile.coverimg.url }}" alt="Обложка"/>
             <div class="profile__info">
-                <img
-                        class="profile__picture"
-                        src="{% static 'main/images/profile/profile_img_default.png' %}"
-                        alt="Фото профиля"
-                />
+                <img class="profile__picture" src="{{ user_profile.profileimg.url }}" alt="Фото профиля"/>
                 <div class="name_and_bio">
-                    <div class="name">Ваше Имя</div>
+                    <div class="name">{{ user.username }}</div>
                     <div class="biography">Ура! Я пользуюсь ArtFlow.</div>
                 </div>
             </div>
@@ -37,15 +28,19 @@
         <div class="profile__bio__info">
             <div class="profile__bio__info__block">
                 <h3>О себе</h3>
-                <p>John1 пока что не добавил биографию.</p>
+                <p>{{ user_profile.bio }}</p>
             </div>
             <div class="profile__bio__info__block">
                 <h3>Навыки</h3>
-                <p>John1 пока что не добавил навыки.</p>
+                <p>{{ user_profile.skills }}</p>
             </div>
             <div class="profile__bio__info__block">
                 <h3>Достижения</h3>
-                <p>John1 пока что не добавил достижения.</p>
+                <p>{{ user_profile.achievements }}</p>
+            </div>
+            <div class="profile__bio__info__block">
+                <h3>Местоположение</h3>
+                <p>{{ user_profile.location }}</p>
             </div>
         </div>
     </div>
